@@ -1,0 +1,13 @@
+{% extends 'two.html' %}
+{% block 'body' %}
+<form enctype='multipart/form-data' action='/postext/' method="Post">
+    {% csrf_token %}
+    <table>
+        <td>Name : {{form.usern}}</td>
+        <td>Text : {{form.user}}</td>
+        <td>Created At : {{form.created_at}}</td>
+        <td>Updated At : {{form.updated_at}}</td>
+        <td><button type="submit" name="submit" class="btn btn-primary">Submit</button>
+    </table>
+</form>
+{% endblock 'body' %}

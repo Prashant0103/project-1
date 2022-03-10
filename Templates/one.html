@@ -1,0 +1,17 @@
+{% extends 'two.html' %} 
+{% block 'body' %}
+<form method="Post" enctype='multipart/form-data'>
+    {% csrf_token %}
+            <table>
+                <td>First Name : {{form.first_name}}</td>
+                <td>Last Name : {{form.last_name}}</td>
+                <td>Email : {{form.email}}</td>
+                <td>Username : {{form.username}}</td>
+                <td>Password : {{form.password}}</td>
+                <td>
+                    <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+                </td>
+            </table>
+<form>
+        
+{% endblock 'body' %}

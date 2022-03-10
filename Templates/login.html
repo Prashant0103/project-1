@@ -1,0 +1,15 @@
+{% block 'body' %}
+<h4>Login First </h4>
+<form id="login-form" class="form" action="/check/" method="Post" enctype='multipart/form-data'>
+            {% csrf_token %}
+            <table>
+                <td>Username : <input type="text" name="username" id="username" class="form-control" Required></td>
+                <td>Password : <input type="text" name="password" id="password" class="form-control" Required></td>
+                <td>
+                    <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+                </td>
+            </table>
+            <br>
+            <a href='/reg' title='click to reg'>Register Here</a>
+        <form>
+{% endblock 'body' %}
